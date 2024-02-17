@@ -1,0 +1,126 @@
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('digital-dream/DIGITALDREAM.ttf');
+   } 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg-color-main: #09090b;
+    --bg-color-calc: #082f49;
+    --border-color-calc:#e5e7eb;
+    --button-color:#92400e; 
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    background-color: var(--bg-color-main);
+    
+}
+.display{
+    width: 30%; 
+    background-color: var(--bg-color-calc);
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px var(--border-color-calc), 
+                1px 0px 2px 0px var(--border-color-calc);
+} 
+
+.display-results{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100px;
+    color:white;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    
+
+}
+.display-results > .display-led{
+    background-color: #082f49;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-family: 'digital-clock-font';
+    font-size: 1.2rem;
+    font-weight: 200;
+    min-width:  95%;
+    max-width: 95%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-interface{
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    display: flex;
+    flex-flow:row wrap;
+    gap:5px;
+    justify-content: center;
+    
+    margin-bottom: 20px;
+} 
+.display-interface > button {
+   
+    height: 40px;
+    border: none;
+    
+    outline: none;
+    
+}
+
+
+.button-calc{
+    border-radius: 3px;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--button-color);
+    box-shadow: 2px 1px black;
+    width: 30%;
+    margin-top: 10px;
+    
+} 
+
+.button-calc:hover{
+    box-shadow: none;
+}
+
+.func{
+    width: 93%;display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+} 
+
+button#ac{
+    width: 18%;
+    background-color: #d97706;
+    border: none;
+    outline: none;
+    height: 40px; 
+    border-radius: 3px;
+}
+button#equals{
+    width: 80%;
+    height: 40px;
+    background-color: #d97706;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+} 
